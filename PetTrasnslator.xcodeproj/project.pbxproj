@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E32764872D6A8DC000AFDF5E /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32764862D6A8DC000AFDF5E /* MenuButtons.swift */; };
+		E34D41142D6B80B40086AFC6 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D41132D6B80B40086AFC6 /* Language.swift */; };
+		E34D41162D6B932A0086AFC6 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D41152D6B932A0086AFC6 /* ButtonStyle.swift */; };
+		E34D41192D6BBCB70086AFC6 /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D41182D6BBCB70086AFC6 /* TranslatorViewModel.swift */; };
 		E358E5F42D6A42E500110CC0 /* PetTrasnslatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E5F32D6A42E500110CC0 /* PetTrasnslatorApp.swift */; };
-		E358E5F62D6A42E500110CC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E5F52D6A42E500110CC0 /* ContentView.swift */; };
 		E358E5F82D6A42E800110CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E358E5F72D6A42E800110CC0 /* Assets.xcassets */; };
 		E358E5FB2D6A42E800110CC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E358E5FA2D6A42E800110CC0 /* Preview Assets.xcassets */; };
+		E358E6032D6A443600110CC0 /* Extensions+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E6022D6A443600110CC0 /* Extensions+Color.swift */; };
+		E358E6072D6A44D300110CC0 /* TranslatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E6062D6A44D300110CC0 /* TranslatorView.swift */; };
+		E358E60A2D6A45AB00110CC0 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E6092D6A45AB00110CC0 /* BackgroundView.swift */; };
+		E358E60C2D6A46B800110CC0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E60B2D6A46B800110CC0 /* Colors.swift */; };
+		E358E60E2D6A508900110CC0 /* KonkhmerSleokchherRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E358E60D2D6A508900110CC0 /* KonkhmerSleokchherRegular.ttf */; };
+		E36599132D6A7354008B69B6 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36599122D6A7354008B69B6 /* Pet.swift */; };
+		E3E783E32D6A585A00685E74 /* Extensions+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E783E22D6A585A00685E74 /* Extensions+Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E32764862D6A8DC000AFDF5E /* MenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
+		E34D41132D6B80B40086AFC6 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		E34D41152D6B932A0086AFC6 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		E34D41182D6BBCB70086AFC6 /* TranslatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewModel.swift; sourceTree = "<group>"; };
 		E358E5F02D6A42E500110CC0 /* PetTrasnslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTrasnslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E358E5F32D6A42E500110CC0 /* PetTrasnslatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTrasnslatorApp.swift; sourceTree = "<group>"; };
-		E358E5F52D6A42E500110CC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E358E5F72D6A42E800110CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E358E5FA2D6A42E800110CC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E358E6022D6A443600110CC0 /* Extensions+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Color.swift"; sourceTree = "<group>"; };
+		E358E6062D6A44D300110CC0 /* TranslatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorView.swift; sourceTree = "<group>"; };
+		E358E6092D6A45AB00110CC0 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		E358E60B2D6A46B800110CC0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E358E60D2D6A508900110CC0 /* KonkhmerSleokchherRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KonkhmerSleokchherRegular.ttf; sourceTree = "<group>"; };
+		E358E60F2D6A50BD00110CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E36599122D6A7354008B69B6 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		E3E783E22D6A585A00685E74 /* Extensions+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Font.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E34D41172D6BBC9B0086AFC6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E34D41182D6BBCB70086AFC6 /* TranslatorViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E34D411A2D6BBE090086AFC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E358E60F2D6A50BD00110CC0 /* Info.plist */,
+				E358E5F72D6A42E800110CC0 /* Assets.xcassets */,
+				E358E60D2D6A508900110CC0 /* KonkhmerSleokchherRegular.ttf */,
+				E358E60B2D6A46B800110CC0 /* Colors.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E358E5E72D6A42E400110CC0 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +91,12 @@
 		E358E5F22D6A42E500110CC0 /* PetTrasnslator */ = {
 			isa = PBXGroup;
 			children = (
+				E36599152D6A73AD008B69B6 /* Models */,
+				E34D41172D6BBC9B0086AFC6 /* ViewModels */,
+				E36599142D6A738E008B69B6 /* Views */,
+				E358E6012D6A441500110CC0 /* Extensions */,
 				E358E5F32D6A42E500110CC0 /* PetTrasnslatorApp.swift */,
-				E358E5F52D6A42E500110CC0 /* ContentView.swift */,
-				E358E5F72D6A42E800110CC0 /* Assets.xcassets */,
+				E34D411A2D6BBE090086AFC6 /* Supporting Files */,
 				E358E5F92D6A42E800110CC0 /* Preview Content */,
 			);
 			path = PetTrasnslator;
@@ -65,6 +108,43 @@
 				E358E5FA2D6A42E800110CC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E358E6012D6A441500110CC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E358E6022D6A443600110CC0 /* Extensions+Color.swift */,
+				E3E783E22D6A585A00685E74 /* Extensions+Font.swift */,
+				E34D41152D6B932A0086AFC6 /* ButtonStyle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E358E6082D6A459200110CC0 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				E358E6092D6A45AB00110CC0 /* BackgroundView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		E36599142D6A738E008B69B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E358E6062D6A44D300110CC0 /* TranslatorView.swift */,
+				E358E6082D6A459200110CC0 /* Reusable */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E36599152D6A73AD008B69B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E36599122D6A7354008B69B6 /* Pet.swift */,
+				E32764862D6A8DC000AFDF5E /* MenuButtons.swift */,
+				E34D41132D6B80B40086AFC6 /* Language.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E358E5FB2D6A42E800110CC0 /* Preview Assets.xcassets in Resources */,
+				E358E60E2D6A508900110CC0 /* KonkhmerSleokchherRegular.ttf in Resources */,
 				E358E5F82D6A42E800110CC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E358E5F62D6A42E500110CC0 /* ContentView.swift in Sources */,
+				E32764872D6A8DC000AFDF5E /* MenuButtons.swift in Sources */,
+				E358E6032D6A443600110CC0 /* Extensions+Color.swift in Sources */,
+				E358E60C2D6A46B800110CC0 /* Colors.swift in Sources */,
+				E34D41162D6B932A0086AFC6 /* ButtonStyle.swift in Sources */,
+				E34D41142D6B80B40086AFC6 /* Language.swift in Sources */,
+				E3E783E32D6A585A00685E74 /* Extensions+Font.swift in Sources */,
+				E358E6072D6A44D300110CC0 /* TranslatorView.swift in Sources */,
+				E358E60A2D6A45AB00110CC0 /* BackgroundView.swift in Sources */,
+				E34D41192D6BBCB70086AFC6 /* TranslatorViewModel.swift in Sources */,
 				E358E5F42D6A42E500110CC0 /* PetTrasnslatorApp.swift in Sources */,
+				E36599132D6A7354008B69B6 /* Pet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +360,7 @@
 				DEVELOPMENT_TEAM = 6XK3NFM9Y7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PetTrasnslator/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +390,7 @@
 				DEVELOPMENT_TEAM = 6XK3NFM9Y7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PetTrasnslator/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct TranslatorView: View {
-    @State private var selectedPet: Pet = .dog
-    @State private var currentLanguage: Language = .human
-    @State private var selectedMenu: MenuButtons = .translator
+    @StateObject var viewModel: TranslatorViewModel
 
     var body: some View {
         BackgroundView(backgroundColor: AppColors.backgroundGradient) {
@@ -35,7 +33,6 @@ struct TranslatorView: View {
                     imageView
                         .frame(height: geometry.size.height * 0.3)
                         .padding(.bottom, geometry.size.height * 0.002)
-
                     Spacer()
                 }
             }
@@ -56,13 +53,13 @@ private extension TranslatorView {
     // MARK: - Language Switch
     var languageSwitch: some View {
         HStack {
-            Text(currentLanguage.title)
+            Text(viewModel.currentLanguage.title)
                 .font(.konkhmerSleokchher(size: 16))
                 .frame(width: 135, height: 61)
 
             Button(action: {
                 withAnimation {
-                    currentLanguage.toggle()
+                    viewModel.currentLanguage.toggle()
                 }
             }) {
                 Image("swapIcon")
@@ -73,7 +70,7 @@ private extension TranslatorView {
             }
             .buttonStyle(BounceButtonStyle())
 
-            Text(currentLanguage == .human ? Language.pet.title : Language.human.title)
+            Text(viewModel.currentLanguage == .human ? Language.pet.title : Language.human.title)
                 .font(.konkhmerSleokchher(size: 16))
                 .frame(width: 135, height: 61)
         }
@@ -107,7 +104,7 @@ private extension TranslatorView {
             ForEach(Pet.allCases, id: \.self) { animal in
                 Button(action: {
                     withAnimation {
-                        selectedPet = animal
+                        viewModel.selectedPet = animal
                     }
                 }) {
                     Image(animal.image)
@@ -118,7 +115,7 @@ private extension TranslatorView {
                         .cornerRadius(12)
                 }
                 .frame(width: 70, height: 70)
-                .opacity(selectedPet == animal ? 1.0 : 0.5)
+                .opacity(viewModel.selectedPet == animal ? 1.0 : 0.5)
                 .buttonStyle(BounceButtonStyle())
             }
         }
@@ -129,7 +126,7 @@ private extension TranslatorView {
 
     // MARK: - Image View
     var imageView: some View {
-        Image(selectedPet.image)
+        Image(viewModel.selectedPet.image)
             .resizable()
             .scaledToFit()
             .frame(width: 184, height: 184)
@@ -153,7 +150,7 @@ private extension TranslatorView {
                             .font(.konkhmerSleokchher(size: 12))
                             .foregroundColor(.black)
                     }
-                    .opacity(selectedMenu == menu ? 1.0 : 0.5)
+                    .opacity(viewModel.selectedMenu == menu ? 1.0 : 0.5)
                 }
                 .buttonStyle(BounceButtonStyle())
             }
@@ -167,6 +164,6 @@ private extension TranslatorView {
 //MARK: Preview
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        TranslatorView()
+        TranslatorView(viewModel: TranslatorViewModel())
     }
 }
