@@ -11,7 +11,7 @@ struct BackgroundView<Content: View>: View {
    private var background: LinearGradient
    private let content: Content
 
-    init(backgroundColor: LinearGradient, @ViewBuilder content: () -> Content) {
+    init(backgroundColor: LinearGradient = AppColors.backgroundGradient, @ViewBuilder content: () -> Content) {
         self.background = backgroundColor
         self.content = content()
     }

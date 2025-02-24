@@ -18,4 +18,6 @@ struct AppColors {
 
     static let catSelectColor = Color(hex: "#D1E7FC")
     static let dogSelectColor = Color(hex: "#ECFBC7")
+
+    static let responseCloudColor = Color(hex: "#D6DCFF")
 }

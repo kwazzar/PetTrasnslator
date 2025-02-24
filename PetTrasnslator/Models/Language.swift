@@ -18,7 +18,6 @@ enum Language {
            }
        }
 
-       // Метод для перемикання мови
        mutating func toggle() {
            self = (self == .human) ? .pet : .human
        }

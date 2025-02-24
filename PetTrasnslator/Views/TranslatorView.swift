@@ -11,10 +11,10 @@ struct TranslatorView: View {
     @StateObject var viewModel: TranslatorViewModel
 
     var body: some View {
-        BackgroundView(backgroundColor: AppColors.backgroundGradient) {
+        BackgroundView {
             GeometryReader { geometry in
                 VStack(spacing: 0) {
-                    header
+                    HeaderView(title: "Translator")
                         .frame(height: geometry.size.height * 0.15)
                         .padding(.top, geometry.size.height * 0.001)
 
@@ -30,7 +30,7 @@ struct TranslatorView: View {
                     .frame(height: geometry.size.height * 0.25)
                     .padding(.vertical, geometry.size.height * 0.01)
 
-                    imageView
+                    ImageView(viewModel.selectedPet.image)
                         .frame(height: geometry.size.height * 0.3)
                         .padding(.bottom, geometry.size.height * 0.002)
                     Spacer()
@@ -41,15 +41,6 @@ struct TranslatorView: View {
 }
 
 private extension TranslatorView {
-    // MARK: - Header
-    var header: some View {
-        Text("Translator")
-            .font(.konkhmerSleokchher(size: 37))
-            .frame(maxWidth: .infinity, alignment: .center)
-            .background(Color.clear)
-            .frame(height: 58)
-    }
-
     // MARK: - Language Switch
     var languageSwitch: some View {
         HStack {
@@ -122,15 +113,6 @@ private extension TranslatorView {
         .frame(width: 107, height: 176)
         .background(AppColors.objectColor)
         .cornerRadius(16)
-    }
-
-    // MARK: - Image View
-    var imageView: some View {
-        Image(viewModel.selectedPet.image)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 184, height: 184)
-            .background(Color.clear)
     }
 
     // MARK: - General Menu
