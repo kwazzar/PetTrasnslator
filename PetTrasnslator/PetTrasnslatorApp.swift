@@ -11,7 +11,7 @@ import SwiftUI
 struct PetTrasnslatorApp: App {
     var body: some Scene {
         WindowGroup {
-            TranslatorView(viewModel: TranslatorViewModel())
+            TranslatorView(viewModel: TranslatorViewModel(audioManager: AudioRecorderManager()))
         }
     }
 }

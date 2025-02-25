@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultView: View {
     @StateObject var viewModel: ResultViewModel
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         BackgroundView {
@@ -55,6 +56,7 @@ private extension ResultView {
     var closeButton: some View {
         Button(action: {
             withAnimation {
+                dismiss()
             }
         }) {
             Image("closeIcon")
@@ -69,10 +71,9 @@ private extension ResultView {
     //MARK: - responseCloud
     var responseCloud: some View {
         VStack {
-            Text("What are you doing, human?")
+            Text(viewModel.translationText)
                 .font(.konkhmerSleokchher(size: 12))
                 .padding(5)
-
         }
         .frame(width: 291, height: 142)
         .background(AppColors.responseCloudColor)
@@ -98,7 +99,7 @@ private extension ResultView {
     var repeatButton: some View {
         Button(action: {
             withAnimation {
-                viewModel.fetchTranslation()
+                dismiss()
             }
         }) {
             HStack {

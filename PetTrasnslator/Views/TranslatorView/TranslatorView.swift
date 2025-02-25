@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TranslatorView: View {
     @StateObject var viewModel: TranslatorViewModel
-
+    
     var body: some View {
         BackgroundView {
             GeometryReader { geometry in
@@ -18,17 +18,7 @@ struct TranslatorView: View {
                         .frame(height: geometry.size.height * 0.15)
                         .padding(.top, geometry.size.height * 0.001)
 
-                    languageSwitch
-                        .frame(height: geometry.size.height * 0.03)
-                        .padding(.top, geometry.size.height * 0.01)
-                        .padding(.bottom, geometry.size.height * 0.04)
-
-                    HStack(spacing: 35) {
-                        microfoneButton
-                        petSelectMenu
-                    }
-                    .frame(height: geometry.size.height * 0.25)
-                    .padding(.vertical, geometry.size.height * 0.01)
+                    stateContentView(geometry: geometry)
 
                     ImageView(viewModel.selectedPet.image)
                         .frame(height: geometry.size.height * 0.3)
@@ -37,17 +27,69 @@ struct TranslatorView: View {
                 }
             }
         }
+        .fullScreenCover(isPresented: $viewModel.navigateToResult, onDismiss: {
+            viewModel.state = .idle
+        }) {
+            ResultView(viewModel: viewModel.createResultViewModel())
+        }
     }
 }
 
 private extension TranslatorView {
+    // MARK: - stateContentView
+    @ViewBuilder
+    private func stateContentView(geometry: GeometryProxy) -> some View {
+        switch viewModel.state {
+        case .idle, .recording:
+            translatingSettings(geometry: geometry)
+
+        case .translating:
+            loadingView(geometry: geometry)
+        }
+    }
+}
+
+// MARK: - loadingView
+func loadingView(geometry: GeometryProxy) -> some View {
+    VStack {
+        Spacer()
+            .frame(height: geometry.size.height * 0.03)
+            .padding(.top, geometry.size.height * 0.01)
+            .padding(.bottom, geometry.size.height * 0.04)
+        LoadingView(text: "Process of translation")
+            .frame(height: geometry.size.height * 0.25)
+            .padding(.vertical, geometry.size.height * 0.01)
+    }
+}
+
+private extension TranslatorView {
+    // MARK: - translating Settings
+    func translatingSettings(geometry: GeometryProxy) -> some View {
+        return VStack {
+            languageSwitch
+                .frame(height: geometry.size.height * 0.03)
+                .padding(.top, geometry.size.height * 0.01)
+                .padding(.bottom, geometry.size.height * 0.04)
+
+            HStack(spacing: 35) {
+                MicrophoneButtonView(
+                    action: { viewModel.toggleRecording() },
+                    audioManager: viewModel.audioManager,
+                    showAlert: $viewModel.microphoneAccessShowAlert)
+                petSelectMenu
+            }
+            .frame(height: geometry.size.height * 0.25)
+            .padding(.vertical, geometry.size.height * 0.01)
+        }
+    }
+
     // MARK: - Language Switch
     var languageSwitch: some View {
         HStack {
             Text(viewModel.currentLanguage.title)
                 .font(.konkhmerSleokchher(size: 16))
                 .frame(width: 135, height: 61)
-
+            
             Button(action: {
                 withAnimation {
                     viewModel.currentLanguage.toggle()
@@ -60,35 +102,14 @@ private extension TranslatorView {
                     .background(Color.clear)
             }
             .buttonStyle(BounceButtonStyle())
-
+            
             Text(viewModel.currentLanguage == .human ? Language.pet.title : Language.human.title)
                 .font(.konkhmerSleokchher(size: 16))
                 .frame(width: 135, height: 61)
         }
         .frame(maxWidth: .infinity)
     }
-
-    // MARK: - Microphone Button
-    var microfoneButton: some View {
-        Button(action: {
-            print("Кнопка натиснута!")
-        }) {
-            VStack(spacing: 20) {
-                Image("microphoneIcon")
-                    .frame(width: 70, height: 70)
-                    .padding(.top, 20)
-                Text("Start Speak")
-                    .font(.konkhmerSleokchher(size: 16))
-                    .foregroundColor(.black)
-                    .padding(.bottom, -15)
-            }
-            .frame(width: 178, height: 176)
-            .background(AppColors.objectColor)
-            .cornerRadius(16)
-        }
-        .buttonStyle(BounceButtonStyle())
-    }
-
+    
     // MARK: - Pet Select Menu
     var petSelectMenu: some View {
         VStack(spacing: 12) {
@@ -114,38 +135,13 @@ private extension TranslatorView {
         .background(AppColors.objectColor)
         .cornerRadius(16)
     }
-
-    // MARK: - General Menu
-    var generalMenu: some View {
-        HStack(spacing: 50) {
-            ForEach(MenuButtons.allCases, id: \.self) { menu in
-                Button(action: {
-                    print("Кнопка \(menu.title) натиснута!")
-                }) {
-                    VStack {
-                        Image(menu.image)
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .background(Color.clear)
-                            .offset(y: 8)
-                        Text(menu.title)
-                            .font(.konkhmerSleokchher(size: 12))
-                            .foregroundColor(.black)
-                    }
-                    .opacity(viewModel.selectedMenu == menu ? 1.0 : 0.5)
-                }
-                .buttonStyle(BounceButtonStyle())
-            }
-        }
-        .frame(width: 216, height: 82)
-        .background(AppColors.objectColor)
-        .cornerRadius(16)
-    }
 }
 
-//MARK: Preview
+//MARK: - Preview
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        TranslatorView(viewModel: TranslatorViewModel())
+        TranslatorView(viewModel:
+                        TranslatorViewModel(
+                            audioManager: AudioRecorderManager()))
     }
 }
