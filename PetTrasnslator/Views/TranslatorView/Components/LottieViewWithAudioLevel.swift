@@ -11,36 +11,39 @@ import Lottie
 struct LottieViewWithAudioLevel: UIViewRepresentable {
     private var animationName: String
     private var audioLevel: Float
-    
+
     init(animationName: String, audioLevel: Float) {
         self.animationName = animationName
         self.audioLevel = audioLevel
     }
-    
+
     private let totalFrames: CGFloat = 33
     private let lowValueFrame: CGFloat = 30
-    
+
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
-        let animationView = LottieAnimationView()
-        let animation = LottieAnimation.named(animationName)
-        animationView.animation = animation
+        let configuration = LottieConfiguration(
+            renderingEngine: .mainThread
+        )
+        let animationView = LottieAnimationView(
+            animation: LottieAnimation.named(animationName),
+            configuration: configuration
+        )
+
         animationView.contentMode = .scaleAspectFit
-        
         animationView.currentFrame = lowValueFrame
         animationView.loopMode = .playOnce
-        
+
         context.coordinator.animationView = animationView
         context.coordinator.totalFrames = totalFrames
         context.coordinator.lowValueFrame = lowValueFrame
-        
+
         animationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(animationView)
         NSLayoutConstraint.activate([
             animationView.heightAnchor.constraint(equalTo: view.heightAnchor),
             animationView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
-        
         return view
     }
     

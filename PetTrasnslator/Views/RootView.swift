@@ -16,21 +16,26 @@ struct RootView: View {
     }
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            TabView(selection: $selectedMenu) {
-                TranslatorView(viewModel: container.createTranslatorViewModel(), container: container)
-                    .tag(MenuButtons.translator)
-                    .ignoresSafeArea(.keyboard, edges: .bottom)
+        BackgroundView {
+            ZStack(alignment: .bottom) {
+                TabView(selection: $selectedMenu) {
+                    TranslatorView(viewModel: container.createTranslatorViewModel(), container: container)
+                        .tag(MenuButtons.translator)
+                        .ignoresSafeArea(.keyboard, edges: .bottom)
 
-                SettingsView(viewModel: container.createSettingsViewModel())
-                    .tag(MenuButtons.setting)
-                    .ignoresSafeArea(.keyboard, edges: .bottom)
+                    SettingsView(viewModel: container.createSettingsViewModel())
+                        .tag(MenuButtons.setting)
+                        .ignoresSafeArea(.keyboard, edges: .bottom)
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .animation(.easeInOut(duration: 0.3), value: selectedMenu)
+
+                GeneralMenu(selectedMenu: $selectedMenu)
+                    .padding(.bottom, 20)
+                    .transition(.move(edge: .bottom)) 
+                    .animation(.easeInOut(duration: 0.3), value: selectedMenu)
             }
-
-            GeneralMenu(selectedMenu: $selectedMenu)
-                .padding(.bottom, 20)
-        }
-        .ignoresSafeArea(.keyboard, edges: .bottom)
+        }.ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }
 
