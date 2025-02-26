@@ -49,6 +49,7 @@ final class SettingsViewModel: ObservableObject {
 }
 
 //MARK: - private methods
+@MainActor
 extension SettingsViewModel {
     private func rateApp() {
         appRatingService.requestReview()
