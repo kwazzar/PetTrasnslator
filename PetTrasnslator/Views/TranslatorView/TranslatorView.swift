@@ -142,6 +142,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         TranslatorView(viewModel:
                         TranslatorViewModel(
-                            audioManager: AudioRecorderManager()))
+                            audioManager: AudioRecorderManager(), translator: TranslatorManager()))
     }
 }

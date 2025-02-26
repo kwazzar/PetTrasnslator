@@ -17,8 +17,14 @@ enum Language {
                return "PET"
            }
        }
-
-       mutating func toggle() {
-           self = (self == .human) ? .pet : .human
-       }
    }
+
+extension Language {
+    mutating func toggle() {
+        self = toggled()
+    }
+
+    func toggled() -> Language {
+        self == .human ? .pet : .human
+    }
+}

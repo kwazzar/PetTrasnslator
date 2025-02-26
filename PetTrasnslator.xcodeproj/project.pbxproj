@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E32740EC2D6E80650033A431 /* GeneralMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32740EB2D6E80650033A431 /* GeneralMenu.swift */; };
+		E32740F22D6EA2710033A431 /* TranslationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32740F12D6EA2710033A431 /* TranslationManager.swift */; };
+		E32740F52D6EABDC0033A431 /* PetMesseges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32740F42D6EABDC0033A431 /* PetMesseges.swift */; };
+		E32740F72D6EAC030033A431 /* CatSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32740F62D6EAC030033A431 /* CatSounds.swift */; };
+		E32740F92D6EAC1D0033A431 /* DogSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32740F82D6EAC1D0033A431 /* DogSounds.swift */; };
 		E32764872D6A8DC000AFDF5E /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32764862D6A8DC000AFDF5E /* MenuButtons.swift */; };
 		E33317302D6E33CF009B4E1B /* TranslatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333172F2D6E33CF009B4E1B /* TranslatorState.swift */; };
 		E33328ED2D6CE2BF00E71A44 /* TaperedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33328EC2D6CE2BF00E71A44 /* TaperedLine.swift */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		E32740EB2D6E80650033A431 /* GeneralMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMenu.swift; sourceTree = "<group>"; };
+		E32740F12D6EA2710033A431 /* TranslationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationManager.swift; sourceTree = "<group>"; };
+		E32740F42D6EABDC0033A431 /* PetMesseges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetMesseges.swift; sourceTree = "<group>"; };
+		E32740F62D6EAC030033A431 /* CatSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSounds.swift; sourceTree = "<group>"; };
+		E32740F82D6EAC1D0033A431 /* DogSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogSounds.swift; sourceTree = "<group>"; };
 		E32764862D6A8DC000AFDF5E /* MenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
 		E333172F2D6E33CF009B4E1B /* TranslatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorState.swift; sourceTree = "<group>"; };
 		E33328EC2D6CE2BF00E71A44 /* TaperedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaperedLine.swift; sourceTree = "<group>"; };
@@ -79,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E32740F32D6EAB8D0033A431 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				E32740F42D6EABDC0033A431 /* PetMesseges.swift */,
+				E32740F62D6EAC030033A431 /* CatSounds.swift */,
+				E32740F82D6EAC1D0033A431 /* DogSounds.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		E33328EB2D6CE27700E71A44 /* ViewsComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +159,7 @@
 				E34D41172D6BBC9B0086AFC6 /* ViewModels */,
 				E36599142D6A738E008B69B6 /* Views */,
 				E358E6012D6A441500110CC0 /* Extensions */,
+				E32740F32D6EAB8D0033A431 /* Mock */,
 				E358E5F32D6A42E500110CC0 /* PetTrasnslatorApp.swift */,
 				E34D411A2D6BBE090086AFC6 /* Supporting Files */,
 				E358E5F92D6A42E800110CC0 /* Preview Content */,
@@ -213,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E397CB3C2D6D25B80081F95A /* AudioRecorderManager.swift */,
+				E32740F12D6EA2710033A431 /* TranslationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -301,14 +321,18 @@
 				E358E6032D6A443600110CC0 /* Extensions+Color.swift in Sources */,
 				E358E60C2D6A46B800110CC0 /* Colors.swift in Sources */,
 				E34D41162D6B932A0086AFC6 /* ButtonStyle.swift in Sources */,
+				E32740F72D6EAC030033A431 /* CatSounds.swift in Sources */,
 				E34D41142D6B80B40086AFC6 /* Language.swift in Sources */,
 				E34D411C2D6BC6E50086AFC6 /* ResultView.swift in Sources */,
 				E3E783E32D6A585A00685E74 /* Extensions+Font.swift in Sources */,
+				E32740F52D6EABDC0033A431 /* PetMesseges.swift in Sources */,
 				E32740EC2D6E80650033A431 /* GeneralMenu.swift in Sources */,
 				E358E6072D6A44D300110CC0 /* TranslatorView.swift in Sources */,
 				E33317302D6E33CF009B4E1B /* TranslatorState.swift in Sources */,
 				E358E60A2D6A45AB00110CC0 /* BackgroundView.swift in Sources */,
 				E34D41192D6BBCB70086AFC6 /* TranslatorViewModel.swift in Sources */,
+				E32740F92D6EAC1D0033A431 /* DogSounds.swift in Sources */,
+				E32740F22D6EA2710033A431 /* TranslationManager.swift in Sources */,
 				E358E5F42D6A42E500110CC0 /* PetTrasnslatorApp.swift in Sources */,
 				E397CB462D6D67090081F95A /* LoadingView.swift in Sources */,
 				E33328EF2D6CEF6800E71A44 /* ResultViewModel.swift in Sources */,
