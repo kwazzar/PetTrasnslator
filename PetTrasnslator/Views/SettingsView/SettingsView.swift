@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
     var body: some View {
         BackgroundView {
             GeometryReader { geometry in
                 VStack {
                     HeaderView(title: "Settings")
+
+                    ForEach(Settings.allCases, id: \.self) { button in
+                        SettingsButton(action: {
+                            button.performAction()
+                        }, title: button.title)
+                    }
+                    Spacer()
                 }
             }
         }
