@@ -22,7 +22,7 @@ struct RootView: View {
                     .tag(MenuButtons.translator)
                     .ignoresSafeArea(.keyboard, edges: .bottom)
 
-                SettingsView()
+                SettingsView(viewModel: container.createSettingsViewModel())
                     .tag(MenuButtons.setting)
                     .ignoresSafeArea(.keyboard, edges: .bottom)
             }

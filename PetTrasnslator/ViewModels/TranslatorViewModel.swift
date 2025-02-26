@@ -15,29 +15,29 @@ final class TranslatorViewModel: ObservableObject {
     @Published var state: TranslatorState = .idle
     @Published var navigateToResult = false
     @Published var translationText: String = ""
-
-    private let translator: TranslatorManager
-
-    init(audioManager: AudioRecorderManager, translator: TranslatorManager) {
+    
+    private let translator: TranslateProtocol
+    
+    init(audioManager: AudioRecorderManager, translator: TranslateProtocol) {
         self.audioManager = audioManager
         self.translator = translator
     }
-
+    
     func toggleRecording() {
         audioManager.requestMicrophonePermission { [weak self] granted in
             guard let self = self else { return }
-
+            
             if granted {
                 switch self.state {
                 case .idle:
                     self.audioManager.startRecording()
                     self.state = .recording
-
+                    
                 case .recording:
                     self.audioManager.stopRecording()
                     self.state = .translating
                     self.translateText()
-
+                    
                 case .translating:
                     self.state = .idle
                 }
@@ -46,14 +46,14 @@ final class TranslatorViewModel: ObservableObject {
             }
         }
     }
-
+    
     private func translateText() {
         let translated = translator.translate(
             from: currentLanguage,
             to: currentLanguage.toggled(),
             pet: selectedPet
         )
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.translationText = translated
             self.navigateToResult = true

@@ -10,4 +10,5 @@ import Foundation
 protocol ContainerProtocol {
     func createTranslatorViewModel() -> TranslatorViewModel
     func createResultViewModel(from translatorViewModel: TranslatorViewModel) -> ResultViewModel
+    func createSettingsViewModel() -> SettingsViewModel
 }

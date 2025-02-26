@@ -42,6 +42,15 @@
 		E36599132D6A7354008B69B6 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36599122D6A7354008B69B6 /* Pet.swift */; };
 		E36A60E82D6F73A6006B601A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60E72D6F73A6006B601A /* Settings.swift */; };
 		E36A60EB2D6F75CA006B601A /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60EA2D6F75CA006B601A /* SettingsButton.swift */; };
+		E36A60ED2D6F8406006B601A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60EC2D6F8406006B601A /* SettingsViewModel.swift */; };
+		E36A60EF2D6F8524006B601A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60EE2D6F8524006B601A /* Constant.swift */; };
+		E36A60F12D6F859F006B601A /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60F02D6F859F006B601A /* MailView.swift */; };
+		E36A60F32D6F88DD006B601A /* TranslateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60F22D6F88DD006B601A /* TranslateProtocol.swift */; };
+		E36A60F52D6F8968006B601A /* SettingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60F42D6F8968006B601A /* SettingProtocols.swift */; };
+		E36A60F72D6F89BC006B601A /* MailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60F62D6F89BC006B601A /* MailService.swift */; };
+		E36A60F92D6F89F7006B601A /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60F82D6F89F7006B601A /* URLHandler.swift */; };
+		E36A60FB2D6F8A0F006B601A /* AppRatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60FA2D6F8A0F006B601A /* AppRatingService.swift */; };
+		E36A60FD2D6F8A35006B601A /* PurchaseRestorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A60FC2D6F8A35006B601A /* PurchaseRestorer.swift */; };
 		E397CB3A2D6D25330081F95A /* MicrophoneButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E397CB392D6D25330081F95A /* MicrophoneButtonView.swift */; };
 		E397CB3D2D6D25B80081F95A /* AudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E397CB3C2D6D25B80081F95A /* AudioRecorderManager.swift */; };
 		E397CB402D6D33800081F95A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E397CB3F2D6D33800081F95A /* Lottie */; };
@@ -89,6 +98,15 @@
 		E36599122D6A7354008B69B6 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		E36A60E72D6F73A6006B601A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E36A60EA2D6F75CA006B601A /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		E36A60EC2D6F8406006B601A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E36A60EE2D6F8524006B601A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E36A60F02D6F859F006B601A /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		E36A60F22D6F88DD006B601A /* TranslateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateProtocol.swift; sourceTree = "<group>"; };
+		E36A60F42D6F8968006B601A /* SettingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProtocols.swift; sourceTree = "<group>"; };
+		E36A60F62D6F89BC006B601A /* MailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailService.swift; sourceTree = "<group>"; };
+		E36A60F82D6F89F7006B601A /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		E36A60FA2D6F8A0F006B601A /* AppRatingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingService.swift; sourceTree = "<group>"; };
+		E36A60FC2D6F8A35006B601A /* PurchaseRestorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRestorer.swift; sourceTree = "<group>"; };
 		E397CB392D6D25330081F95A /* MicrophoneButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneButtonView.swift; sourceTree = "<group>"; };
 		E397CB3C2D6D25B80081F95A /* AudioRecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
 		E397CB412D6D346E0081F95A /* LottieViewWithAudioLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewWithAudioLevel.swift; sourceTree = "<group>"; };
@@ -145,7 +163,6 @@
 		E32741092D6ED2240033A431 /* Container */ = {
 			isa = PBXGroup;
 			children = (
-				E35665EC2D6F53CE00CB4257 /* ContainerProtocol.swift */,
 				E35665EE2D6F56F300CB4257 /* AppConteiner.swift */,
 			);
 			path = Container;
@@ -173,6 +190,7 @@
 			children = (
 				E34D41182D6BBCB70086AFC6 /* TranslatorViewModel.swift */,
 				E33328EE2D6CEF6800E71A44 /* ResultViewModel.swift */,
+				E36A60EC2D6F8406006B601A /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -185,6 +203,7 @@
 				E358E5F72D6A42E800110CC0 /* Assets.xcassets */,
 				E358E60D2D6A508900110CC0 /* KonkhmerSleokchherRegular.ttf */,
 				E358E60B2D6A46B800110CC0 /* Colors.swift */,
+				E36A60EE2D6F8524006B601A /* Constant.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -208,6 +227,7 @@
 		E358E5F22D6A42E500110CC0 /* PetTrasnslator */ = {
 			isa = PBXGroup;
 			children = (
+				E36A60FE2D6F8C31006B601A /* Protocols */,
 				E32741092D6ED2240033A431 /* Container */,
 				E397CB3B2D6D25A50081F95A /* Managers */,
 				E36599152D6A73AD008B69B6 /* Models */,
@@ -280,8 +300,19 @@
 			children = (
 				E32741072D6ED1440033A431 /* SettingsView.swift */,
 				E36A60EA2D6F75CA006B601A /* SettingsButton.swift */,
+				E36A60F02D6F859F006B601A /* MailView.swift */,
 			);
 			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		E36A60FE2D6F8C31006B601A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E35665EC2D6F53CE00CB4257 /* ContainerProtocol.swift */,
+				E36A60F42D6F8968006B601A /* SettingProtocols.swift */,
+				E36A60F22D6F88DD006B601A /* TranslateProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E397CB382D6D250F0081F95A /* TranslatorView */ = {
@@ -298,6 +329,10 @@
 			children = (
 				E397CB3C2D6D25B80081F95A /* AudioRecorderManager.swift */,
 				E32740F12D6EA2710033A431 /* TranslationManager.swift */,
+				E36A60F62D6F89BC006B601A /* MailService.swift */,
+				E36A60F82D6F89F7006B601A /* URLHandler.swift */,
+				E36A60FA2D6F8A0F006B601A /* AppRatingService.swift */,
+				E36A60FC2D6F8A35006B601A /* PurchaseRestorer.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -384,10 +419,14 @@
 				E32741032D6ECCF60033A431 /* CloseButton.swift in Sources */,
 				E397CB3D2D6D25B80081F95A /* AudioRecorderManager.swift in Sources */,
 				E397CB422D6D346E0081F95A /* LottieViewWithAudioLevel.swift in Sources */,
+				E36A60F92D6F89F7006B601A /* URLHandler.swift in Sources */,
 				E32764872D6A8DC000AFDF5E /* MenuButtons.swift in Sources */,
+				E36A60ED2D6F8406006B601A /* SettingsViewModel.swift in Sources */,
 				E358E6032D6A443600110CC0 /* Extensions+Color.swift in Sources */,
 				E358E60C2D6A46B800110CC0 /* Colors.swift in Sources */,
+				E36A60F52D6F8968006B601A /* SettingProtocols.swift in Sources */,
 				E34D41162D6B932A0086AFC6 /* ButtonStyle.swift in Sources */,
+				E36A60F32D6F88DD006B601A /* TranslateProtocol.swift in Sources */,
 				E35665EF2D6F56F300CB4257 /* AppConteiner.swift in Sources */,
 				E32740FC2D6EC54D0033A431 /* PetSelectMenu.swift in Sources */,
 				E32740F72D6EAC030033A431 /* CatSounds.swift in Sources */,
@@ -402,10 +441,13 @@
 				E33317302D6E33CF009B4E1B /* TranslatorState.swift in Sources */,
 				E36A60E82D6F73A6006B601A /* Settings.swift in Sources */,
 				E358E60A2D6A45AB00110CC0 /* BackgroundView.swift in Sources */,
+				E36A60FD2D6F8A35006B601A /* PurchaseRestorer.swift in Sources */,
 				E34D41192D6BBCB70086AFC6 /* TranslatorViewModel.swift in Sources */,
 				E32740F92D6EAC1D0033A431 /* DogSounds.swift in Sources */,
 				E32740F22D6EA2710033A431 /* TranslationManager.swift in Sources */,
 				E358E5F42D6A42E500110CC0 /* PetTrasnslatorApp.swift in Sources */,
+				E36A60FB2D6F8A0F006B601A /* AppRatingService.swift in Sources */,
+				E36A60F72D6F89BC006B601A /* MailService.swift in Sources */,
 				E397CB462D6D67090081F95A /* LoadingView.swift in Sources */,
 				E36A60EB2D6F75CA006B601A /* SettingsButton.swift in Sources */,
 				E32740FE2D6EC72F0033A431 /* LanguageSwitch.swift in Sources */,
@@ -414,9 +456,11 @@
 				E397CB3A2D6D25330081F95A /* MicrophoneButtonView.swift in Sources */,
 				E36599132D6A7354008B69B6 /* Pet.swift in Sources */,
 				E35665F12D6F5C0600CB4257 /* RootView.swift in Sources */,
+				E36A60EF2D6F8524006B601A /* Constant.swift in Sources */,
 				E34D41202D6BCB110086AFC6 /* ImageView.swift in Sources */,
 				E34D411E2D6BC71A0086AFC6 /* HeaderView.swift in Sources */,
 				E33328ED2D6CE2BF00E71A44 /* TaperedLine.swift in Sources */,
+				E36A60F12D6F859F006B601A /* MailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@
 //  Created by Quasar on 26.02.2025.
 //
 
-final class TranslatorManager {
+final class TranslatorManager: TranslateProtocol {
     static let shared = TranslatorManager()
 
     func translate(from source: Language, to destination: Language, pet: Pet) -> String {

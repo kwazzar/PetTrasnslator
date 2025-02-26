@@ -7,19 +7,29 @@
 
 final class AppContainer: ContainerProtocol {
     static let shared = AppContainer()
-    
-    private let translator = TranslatorManager.shared
-    private let audioManager = AudioRecorderManager()
-    
-    func createTranslatorViewModel() -> TranslatorViewModel {
+
+     func createTranslatorViewModel() -> TranslatorViewModel {
+        let translator = TranslatorManager.shared
+        let audioManager = AudioRecorderManager()
         return TranslatorViewModel(audioManager: audioManager, translator: translator)
     }
     
-    func createResultViewModel(from translatorViewModel: TranslatorViewModel) -> ResultViewModel {
+     func createResultViewModel(from translatorViewModel: TranslatorViewModel) -> ResultViewModel {
         let resultViewModel = ResultViewModel()
         resultViewModel.selectedPet = translatorViewModel.selectedPet
         resultViewModel.hasTranslation = true
         resultViewModel.translationText = translatorViewModel.translationText
         return resultViewModel
+    }
+
+    func createSettingsViewModel() -> SettingsViewModel {
+        let mailService = MailService()
+        let urlHandler = URLHandler()
+        let appRatingService = AppRatingService()
+        let purchaseRestorer = PurchaseRestorer()
+        return SettingsViewModel(mailService: mailService,
+                                 urlHandler: urlHandler,
+                                 appRatingService: appRatingService,
+                                 purchaseRestorer: purchaseRestorer)
     }
 }
