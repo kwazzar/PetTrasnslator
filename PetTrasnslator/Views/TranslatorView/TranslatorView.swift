@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TranslatorView: View {
     @StateObject var viewModel: TranslatorViewModel
+    let container: ContainerProtocol
     
     var body: some View {
         BackgroundView {
@@ -30,7 +31,7 @@ struct TranslatorView: View {
         .fullScreenCover(isPresented: $viewModel.navigateToResult, onDismiss: {
             viewModel.state = .idle
         }) {
-            ResultView(viewModel: viewModel.createResultViewModel())
+            ResultView(viewModel: container.createResultViewModel(from: self.viewModel))
         }
     }
 }
@@ -86,10 +87,10 @@ private extension TranslatorView {
 }
 
 //MARK: - Preview
-struct MainView_Previews: PreviewProvider {
+struct TranslatorView_Previews: PreviewProvider {
     static var previews: some View {
         TranslatorView(viewModel:
                         TranslatorViewModel(
-                            audioManager: AudioRecorderManager(), translator: TranslatorManager()))
+                            audioManager: AudioRecorderManager(), translator: TranslatorManager()), container: AppConteiner())
     }
 }

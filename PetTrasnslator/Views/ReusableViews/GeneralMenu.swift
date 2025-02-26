@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct GeneralMenu: View {
-    @State var selectedMenu: MenuButtons
+    @Binding var selectedMenu: MenuButtons
 
     var body: some View {
         HStack(spacing: 50) {
             ForEach(MenuButtons.allCases, id: \.self) { menu in
                 Button(action: {
-                    print("Кнопка \(menu.title) натиснута!")
+                    selectedMenu = menu
                 }) {
                     VStack {
                         Image(menu.image)

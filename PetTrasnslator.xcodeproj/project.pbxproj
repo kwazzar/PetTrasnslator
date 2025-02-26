@@ -17,6 +17,7 @@
 		E32741012D6ECC2F0033A431 /* RepeatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32741002D6ECC2F0033A431 /* RepeatButton.swift */; };
 		E32741032D6ECCF60033A431 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32741022D6ECCF60033A431 /* CloseButton.swift */; };
 		E32741052D6ECDDD0033A431 /* ResponseCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32741042D6ECDDD0033A431 /* ResponseCloudView.swift */; };
+		E32741082D6ED1440033A431 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32741072D6ED1440033A431 /* SettingsView.swift */; };
 		E32764872D6A8DC000AFDF5E /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32764862D6A8DC000AFDF5E /* MenuButtons.swift */; };
 		E33317302D6E33CF009B4E1B /* TranslatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333172F2D6E33CF009B4E1B /* TranslatorState.swift */; };
 		E33328ED2D6CE2BF00E71A44 /* TaperedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33328EC2D6CE2BF00E71A44 /* TaperedLine.swift */; };
@@ -27,6 +28,9 @@
 		E34D411C2D6BC6E50086AFC6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D411B2D6BC6E50086AFC6 /* ResultView.swift */; };
 		E34D411E2D6BC71A0086AFC6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D411D2D6BC71A0086AFC6 /* HeaderView.swift */; };
 		E34D41202D6BCB110086AFC6 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D411F2D6BCB110086AFC6 /* ImageView.swift */; };
+		E35665ED2D6F53CE00CB4257 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35665EC2D6F53CE00CB4257 /* ContainerProtocol.swift */; };
+		E35665EF2D6F56F300CB4257 /* AppConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35665EE2D6F56F300CB4257 /* AppConteiner.swift */; };
+		E35665F12D6F5C0600CB4257 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35665F02D6F5C0600CB4257 /* RootView.swift */; };
 		E358E5F42D6A42E500110CC0 /* PetTrasnslatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358E5F32D6A42E500110CC0 /* PetTrasnslatorApp.swift */; };
 		E358E5F82D6A42E800110CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E358E5F72D6A42E800110CC0 /* Assets.xcassets */; };
 		E358E5FB2D6A42E800110CC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E358E5FA2D6A42E800110CC0 /* Preview Assets.xcassets */; };
@@ -56,6 +60,7 @@
 		E32741002D6ECC2F0033A431 /* RepeatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatButton.swift; sourceTree = "<group>"; };
 		E32741022D6ECCF60033A431 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		E32741042D6ECDDD0033A431 /* ResponseCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCloudView.swift; sourceTree = "<group>"; };
+		E32741072D6ED1440033A431 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E32764862D6A8DC000AFDF5E /* MenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
 		E333172F2D6E33CF009B4E1B /* TranslatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorState.swift; sourceTree = "<group>"; };
 		E33328EC2D6CE2BF00E71A44 /* TaperedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaperedLine.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		E34D411B2D6BC6E50086AFC6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		E34D411D2D6BC71A0086AFC6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E34D411F2D6BCB110086AFC6 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		E35665EC2D6F53CE00CB4257 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		E35665EE2D6F56F300CB4257 /* AppConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConteiner.swift; sourceTree = "<group>"; };
+		E35665F02D6F5C0600CB4257 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		E358E5F02D6A42E500110CC0 /* PetTrasnslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTrasnslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E358E5F32D6A42E500110CC0 /* PetTrasnslatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTrasnslatorApp.swift; sourceTree = "<group>"; };
 		E358E5F72D6A42E800110CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +138,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		E32741092D6ED2240033A431 /* Conteiner */ = {
+			isa = PBXGroup;
+			children = (
+				E35665EC2D6F53CE00CB4257 /* ContainerProtocol.swift */,
+				E35665EE2D6F56F300CB4257 /* AppConteiner.swift */,
+			);
+			path = Conteiner;
+			sourceTree = "<group>";
+		};
 		E33328EB2D6CE27700E71A44 /* ViewsComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +204,7 @@
 		E358E5F22D6A42E500110CC0 /* PetTrasnslator */ = {
 			isa = PBXGroup;
 			children = (
+				E32741092D6ED2240033A431 /* Conteiner */,
 				E397CB3B2D6D25A50081F95A /* Managers */,
 				E36599152D6A73AD008B69B6 /* Models */,
 				E34D41172D6BBC9B0086AFC6 /* ViewModels */,
@@ -231,10 +249,12 @@
 		E36599142D6A738E008B69B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E35665F02D6F5C0600CB4257 /* RootView.swift */,
 				E397CB382D6D250F0081F95A /* TranslatorView */,
 				E33328F02D6D145700E71A44 /* ResultView */,
 				E33328EB2D6CE27700E71A44 /* ViewsComponents */,
 				E358E6082D6A459200110CC0 /* ReusableViews */,
+				E32741072D6ED1440033A431 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +374,7 @@
 				E358E6032D6A443600110CC0 /* Extensions+Color.swift in Sources */,
 				E358E60C2D6A46B800110CC0 /* Colors.swift in Sources */,
 				E34D41162D6B932A0086AFC6 /* ButtonStyle.swift in Sources */,
+				E35665EF2D6F56F300CB4257 /* AppConteiner.swift in Sources */,
 				E32740FC2D6EC54D0033A431 /* PetSelectMenu.swift in Sources */,
 				E32740F72D6EAC030033A431 /* CatSounds.swift in Sources */,
 				E34D41142D6B80B40086AFC6 /* Language.swift in Sources */,
@@ -361,6 +382,7 @@
 				E3E783E32D6A585A00685E74 /* Extensions+Font.swift in Sources */,
 				E32740F52D6EABDC0033A431 /* PetMesseges.swift in Sources */,
 				E32740EC2D6E80650033A431 /* GeneralMenu.swift in Sources */,
+				E35665ED2D6F53CE00CB4257 /* ContainerProtocol.swift in Sources */,
 				E358E6072D6A44D300110CC0 /* TranslatorView.swift in Sources */,
 				E32741012D6ECC2F0033A431 /* RepeatButton.swift in Sources */,
 				E33317302D6E33CF009B4E1B /* TranslatorState.swift in Sources */,
@@ -371,9 +393,11 @@
 				E358E5F42D6A42E500110CC0 /* PetTrasnslatorApp.swift in Sources */,
 				E397CB462D6D67090081F95A /* LoadingView.swift in Sources */,
 				E32740FE2D6EC72F0033A431 /* LanguageSwitch.swift in Sources */,
+				E32741082D6ED1440033A431 /* SettingsView.swift in Sources */,
 				E33328EF2D6CEF6800E71A44 /* ResultViewModel.swift in Sources */,
 				E397CB3A2D6D25330081F95A /* MicrophoneButtonView.swift in Sources */,
 				E36599132D6A7354008B69B6 /* Pet.swift in Sources */,
+				E35665F12D6F5C0600CB4257 /* RootView.swift in Sources */,
 				E34D41202D6BCB110086AFC6 /* ImageView.swift in Sources */,
 				E34D411E2D6BC71A0086AFC6 /* HeaderView.swift in Sources */,
 				E33328ED2D6CE2BF00E71A44 /* TaperedLine.swift in Sources */,

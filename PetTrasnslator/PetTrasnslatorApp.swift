@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct PetTrasnslatorApp: App {
-    private let translator = TranslatorManager.shared
+    private let container = AppConteiner()
 
     var body: some Scene {
         WindowGroup {
-            TranslatorView(viewModel: TranslatorViewModel(audioManager: AudioRecorderManager(), translator: translator))
+RootView(container: container)
         }
     }
 }
