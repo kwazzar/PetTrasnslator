@@ -17,9 +17,9 @@ struct TranslatorView: View {
                     HeaderView(title: "Translator")
                         .frame(height: geometry.size.height * 0.15)
                         .padding(.top, geometry.size.height * 0.001)
-
+                    
                     stateContentView(geometry: geometry)
-
+                    
                     ImageView(viewModel.selectedPet.image)
                         .frame(height: geometry.size.height * 0.3)
                         .padding(.bottom, geometry.size.height * 0.002)
@@ -42,98 +42,46 @@ private extension TranslatorView {
         switch viewModel.state {
         case .idle, .recording:
             translatingSettings(geometry: geometry)
-
+            
         case .translating:
             loadingView(geometry: geometry)
         }
     }
-}
-
-// MARK: - loadingView
-func loadingView(geometry: GeometryProxy) -> some View {
-    VStack {
-        Spacer()
-            .frame(height: geometry.size.height * 0.03)
-            .padding(.top, geometry.size.height * 0.01)
-            .padding(.bottom, geometry.size.height * 0.04)
-        LoadingView(text: "Process of translation")
-            .frame(height: geometry.size.height * 0.25)
-            .padding(.vertical, geometry.size.height * 0.01)
-    }
-}
-
-private extension TranslatorView {
-    // MARK: - translating Settings
-    func translatingSettings(geometry: GeometryProxy) -> some View {
-        return VStack {
-            languageSwitch
+    
+    // MARK: - loadingView
+    func loadingView(geometry: GeometryProxy) -> some View {
+        VStack {
+            Spacer()
                 .frame(height: geometry.size.height * 0.03)
                 .padding(.top, geometry.size.height * 0.01)
                 .padding(.bottom, geometry.size.height * 0.04)
-
+            LoadingView(text: "Process of translation")
+                .frame(height: geometry.size.height * 0.25)
+                .padding(.vertical, geometry.size.height * 0.01)
+        }
+    }
+    
+    // MARK: - translating Settings
+    func translatingSettings(geometry: GeometryProxy) -> some View {
+        return VStack {
+            LanguageSwitch(
+                currentLanguage: $viewModel.currentLanguage,
+                action: { viewModel.currentLanguage.toggle()
+                })
+            .frame(height: geometry.size.height * 0.03)
+            .padding(.top, geometry.size.height * 0.01)
+            .padding(.bottom, geometry.size.height * 0.04)
+            
             HStack(spacing: 35) {
                 MicrophoneButtonView(
                     action: { viewModel.toggleRecording() },
                     audioManager: viewModel.audioManager,
                     showAlert: $viewModel.microphoneAccessShowAlert)
-                petSelectMenu
+                PetSelectMenu(viewModel.selectedPet)
             }
             .frame(height: geometry.size.height * 0.25)
             .padding(.vertical, geometry.size.height * 0.01)
         }
-    }
-
-    // MARK: - Language Switch
-    var languageSwitch: some View {
-        HStack {
-            Text(viewModel.currentLanguage.title)
-                .font(.konkhmerSleokchher(size: 16))
-                .frame(width: 135, height: 61)
-            
-            Button(action: {
-                withAnimation {
-                    viewModel.currentLanguage.toggle()
-                }
-            }) {
-                Image("swapIcon")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-                    .padding(.horizontal, -5)
-                    .background(Color.clear)
-            }
-            .buttonStyle(BounceButtonStyle())
-            
-            Text(viewModel.currentLanguage == .human ? Language.pet.title : Language.human.title)
-                .font(.konkhmerSleokchher(size: 16))
-                .frame(width: 135, height: 61)
-        }
-        .frame(maxWidth: .infinity)
-    }
-    
-    // MARK: - Pet Select Menu
-    var petSelectMenu: some View {
-        VStack(spacing: 12) {
-            ForEach(Pet.allCases, id: \.self) { animal in
-                Button(action: {
-                    withAnimation {
-                        viewModel.selectedPet = animal
-                    }
-                }) {
-                    Image(animal.image)
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .padding(15)
-                        .background(animal.color)
-                        .cornerRadius(12)
-                }
-                .frame(width: 70, height: 70)
-                .opacity(viewModel.selectedPet == animal ? 1.0 : 0.5)
-                .buttonStyle(BounceButtonStyle())
-            }
-        }
-        .frame(width: 107, height: 176)
-        .background(AppColors.objectColor)
-        .cornerRadius(16)
     }
 }
 

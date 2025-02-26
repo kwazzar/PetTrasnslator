@@ -11,12 +11,11 @@ final class ResultViewModel: ObservableObject {
     @Published var selectedPet: Pet = .dog
     @Published var hasTranslation: Bool = false
     @Published var translationText: String = ""
-    
-    // Метод для закрытия ResultView и возвращения к TranslatorView
+
     func closeResult(completion: @escaping () -> Void) {
         hasTranslation = false
         translationText = ""
-        // Выполняем любую необходимую логику очистки
+
         completion()
     }
     
