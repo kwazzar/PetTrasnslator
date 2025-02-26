@@ -5,8 +5,8 @@
 //  Created by Quasar on 26.02.2025.
 //
 
-final class AppConteiner: ContainerProtocol {
-    static let shared = AppConteiner()
+final class AppContainer: ContainerProtocol {
+    static let shared = AppContainer()
     
     private let translator = TranslatorManager.shared
     private let audioManager = AudioRecorderManager()

@@ -59,12 +59,4 @@ final class TranslatorViewModel: ObservableObject {
             self.navigateToResult = true
         }
     }
-
-//    func createResultViewModel() -> ResultViewModel {
-//        let resultViewModel = ResultViewModel()
-//        resultViewModel.selectedPet = self.selectedPet
-//        resultViewModel.hasTranslation = true
-//        resultViewModel.translationText = self.translationText
-//        return resultViewModel
-//    }
 }

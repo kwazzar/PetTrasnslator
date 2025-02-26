@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct PetTrasnslatorApp: App {
-    private let container = AppConteiner()
-
+    private let container = AppContainer()
+    
     var body: some Scene {
         WindowGroup {
-RootView(container: container)
+            RootView(container: container)
         }
     }
 }

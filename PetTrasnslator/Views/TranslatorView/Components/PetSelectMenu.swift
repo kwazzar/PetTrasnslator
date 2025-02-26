@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct PetSelectMenu: View {
-    @State var selectedPet: Pet
-
-    init(_ selectedPet: Pet) {
-        self.selectedPet = selectedPet
-    }
-
+    @Binding var selectedPet: Pet
+    
     var body: some View {
         VStack(spacing: 12) {
             ForEach(Pet.allCases, id: \.self) { animal in
@@ -42,6 +38,6 @@ struct PetSelectMenu: View {
 
 struct PetSelectMenu_Previews: PreviewProvider {
     static var previews: some View {
-        PetSelectMenu(.dog)
+        PetSelectMenu(selectedPet: .constant(.dog))
     }
 }

@@ -138,13 +138,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		E32741092D6ED2240033A431 /* Conteiner */ = {
+		E32741092D6ED2240033A431 /* Container */ = {
 			isa = PBXGroup;
 			children = (
 				E35665EC2D6F53CE00CB4257 /* ContainerProtocol.swift */,
 				E35665EE2D6F56F300CB4257 /* AppConteiner.swift */,
 			);
-			path = Conteiner;
+			path = Container;
 			sourceTree = "<group>";
 		};
 		E33328EB2D6CE27700E71A44 /* ViewsComponents */ = {
@@ -204,7 +204,7 @@
 		E358E5F22D6A42E500110CC0 /* PetTrasnslator */ = {
 			isa = PBXGroup;
 			children = (
-				E32741092D6ED2240033A431 /* Conteiner */,
+				E32741092D6ED2240033A431 /* Container */,
 				E397CB3B2D6D25A50081F95A /* Managers */,
 				E36599152D6A73AD008B69B6 /* Models */,
 				E34D41172D6BBC9B0086AFC6 /* ViewModels */,

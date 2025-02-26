@@ -10,21 +10,24 @@ import SwiftUI
 struct TranslatorView: View {
     @StateObject var viewModel: TranslatorViewModel
     let container: ContainerProtocol
-    
+
     var body: some View {
         BackgroundView {
             GeometryReader { geometry in
-                VStack(spacing: 0) {
+                ZStack(alignment: .top) {
                     HeaderView(title: "Translator")
                         .frame(height: geometry.size.height * 0.15)
                         .padding(.top, geometry.size.height * 0.001)
-                    
+                        .frame(maxWidth: .infinity, alignment: .top)
+
                     stateContentView(geometry: geometry)
-                    
+                        .frame(maxWidth: .infinity)
+                        .offset(y: geometry.size.height * 0.17)
+
                     ImageView(viewModel.selectedPet.image)
                         .frame(height: geometry.size.height * 0.3)
-                        .padding(.bottom, geometry.size.height * 0.002)
-                    Spacer()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                        .offset(y: -geometry.size.height * 0.1)
                 }
             }
         }
@@ -78,7 +81,7 @@ private extension TranslatorView {
                     action: { viewModel.toggleRecording() },
                     audioManager: viewModel.audioManager,
                     showAlert: $viewModel.microphoneAccessShowAlert)
-                PetSelectMenu(viewModel.selectedPet)
+                PetSelectMenu(selectedPet: $viewModel.selectedPet)
             }
             .frame(height: geometry.size.height * 0.25)
             .padding(.vertical, geometry.size.height * 0.01)
@@ -89,8 +92,9 @@ private extension TranslatorView {
 //MARK: - Preview
 struct TranslatorView_Previews: PreviewProvider {
     static var previews: some View {
-        TranslatorView(viewModel:
-                        TranslatorViewModel(
-                            audioManager: AudioRecorderManager(), translator: TranslatorManager()), container: AppConteiner())
+        TranslatorView(viewModel: TranslatorViewModel(
+            audioManager: AudioRecorderManager(),
+            translator: TranslatorManager()),
+                       container: AppContainer())
     }
 }
